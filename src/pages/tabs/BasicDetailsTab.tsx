@@ -48,11 +48,11 @@ const DEMOGRAPHIC_FIELDS: FieldDef[] = [
   { key: 'relationshipType', label: 'Relationship Type', type: 'select', options: ['Self', 'Spouse', 'Father', 'Mother', 'Son', 'Daughter'] },
   { key: 'productName', label: 'Product Name', editable: false },
   { key: 'maritalStatus', label: 'Marital Status', type: 'select', options: ['Married', 'Single', 'Widowed', 'Divorced'] },
-  { key: 'cinNumber', label: 'CIN Number', mono: true },
+  { key: 'cinNumber', label: 'CIN Number', mono: true , editable: false },
 
   { key: 'ovdRegistrationType', label: 'OVD / Registration Type', type: 'select', options: ['Aadhaar', 'Passport', 'Voter ID', 'Driving License'] },
-  { key: 'vintageAtBusinessPlace', label: 'Vintage at Business Place (yrs)', type: 'number', mono: true },
-  { key: 'ekycConsentStatus', label: 'eKYC Consent Status', type: 'select', options: ['Approved', 'Pending', 'Declined'], flag: (v) => (v === 'Declined' ? 'Blocks disbursal' : null) },
+  // { key: 'vintageAtBusinessPlace', label: 'Vintage at Business Place (yrs)', type: 'number', mono: true },
+  { key: 'ekycConsentStatus', label: 'eKYC Consent Status', type: 'select', options: ['Approved', 'Pending', 'Declined'], flag: (v) => (v === 'Declined' ? 'Blocks disbursal' : null),editable: false},
   {
     key: 'cibilAddressCheck',
     label: 'CIBIL Address Check',
@@ -73,13 +73,13 @@ const DEMOGRAPHIC_FIELDS: FieldDef[] = [
   },
 
   { key: 'cibilUidaiCheck', label: 'CIBIL UIDAI Check', editable: false },
-  { key: 'msmeClassification', label: 'MSME Classification', type: 'select', options: ['Yes', 'No'] },
+  { key: 'msmeClassification', label: 'MSME Classification', type: 'select', options: ['Yes', 'No'],editable: false },
   { key: 'msmeType', label: 'MSME Type', type: 'select', options: ['Micro', 'Small', 'Medium'] },
-  { key: 'nicCode', label: 'NIC Code', mono: true },
+  { key: 'nicCode', label: 'NIC Code', mono: true, editable: false },
 
-  { key: 'udhyamRegistrationNo', label: 'Udhyam Registration No', mono: true },
-  { key: 'dinNumber', label: 'DIN Number', mono: true },
-  { key: 'kycPodStatus', label: 'KYC POD Status', type: 'select', options: ['Search Initiated', 'Completed', 'Pending'] },
+  { key: 'udhyamRegistrationNo', label: 'Udhyam Registration No', mono: true, editable: false },
+  { key: 'dinNumber', label: 'DIN Number', mono: true, editable: false },
+  { key: 'kycPodStatus', label: 'KYC POD Status', type: 'select', options: ['Search Initiated', 'Completed', 'Pending'],editable: false },
 ]
 
 const LEI_FIELDS: FieldDef[] = [
